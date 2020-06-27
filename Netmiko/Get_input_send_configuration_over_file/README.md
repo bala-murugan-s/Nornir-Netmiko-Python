@@ -1,5 +1,3 @@
-# Nornir-Netmiko-Python
-
 :AUTHOR: wol-verine
 :GITHUB-LINK: github.com/wol-verine
 
