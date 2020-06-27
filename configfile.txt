@@ -1,0 +1,13 @@
+spanning-tree portfast bpduguard default
+no ip http
+no ip http secure server
+line vty 0 4
+exec-timeout 15 0
+privilege level 15
+transport input ssh
+banner login ^
+*****
+authorized access only
+*****
+^
+username test_user password privilege 15 algorithm-type scrypt secret testpass
