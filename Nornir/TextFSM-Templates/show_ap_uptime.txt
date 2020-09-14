@@ -1,0 +1,16 @@
+Value Required AP_NAME ([a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z0-9]+)
+Value Required ETH_MAC ([a-zA-Z0-9]+:[a-zA-Z0-9]+:[a-zA-Z0-9]+:[a-zA-Z0-9]+:[a-zA-Z0-9]+:[a-zA-Z0-9]+)
+Value Required AP_UP_TIME (\d+\s+\w+.s.,?\s+\d+\s+\w+\s+\d+\s+\w+\s+\d+\s+\w+)
+Value Required ASSO_UP_TIME (\d+\s+\w+.s.,?\s+\d+\s+\w+\s+\d+\s+\w+\s+\d+\s+\w+)
+
+Start
+  ^AP Name\s+Ethernet MAC\s+AP Up Time\s+Association Up Time -> Start_record
+
+Start_record
+  ^------------------\s+-----------------\s+-----------------------\s+----------------------- -> Start_record_1
+
+Start_record_1
+  ^${AP_NAME}\s+${ETH_MAC}\s+${AP_UP_TIME}\s+${ASSO_UP_TIME} -> Record
+  ^\s+$$
+  ^$$
+  ^.* -> Error "LINE NOT FOUND"
