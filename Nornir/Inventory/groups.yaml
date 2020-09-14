@@ -1,0 +1,5 @@
+cisco_wireless:
+    platform: cisco_wlc
+    port: 22
+    vendor: cisco
+    type: wireless
