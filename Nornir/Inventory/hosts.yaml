@@ -1,0 +1,21 @@
+CISCO-WLC01:
+        hostname: 10.10.10.10
+        alias: CISCO-WLC01
+        username: admin
+        password: password
+        groups:
+            - cisco_wireless
+        data:
+            site: renton
+            role: wireless
+			
+CISCO-WLC02:
+        hostname: 10.10.10.11
+        alias: CISCO-WLC02
+        username: admin
+        password: password
+        groups:
+            - cisco_wireless
+        data:
+            site: renton
+            role: wireless			
